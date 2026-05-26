@@ -1,8 +1,94 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "corecn",
+  "homepage": "https://corecn.vercel.app",
   "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "CoreCN button primitive built on shadcn/ui.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "CoreCN card primitive built on shadcn/ui.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "CoreCN input primitive built on shadcn/ui.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "CoreCN label primitive built on shadcn/ui.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "CoreCN textarea primitive built on shadcn/ui.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "brand-button",
+      "type": "registry:ui",
+      "title": "Brand Button",
+      "description": "Rounded, emphasized button variant for CoreCN apps.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/brand-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat-card",
+      "type": "registry:block",
+      "title": "Stat Card",
+      "description": "Dashboard metric card with title, value, and optional trend.",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/stat-card/stat-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
     {
       "name": "hello-world",
       "type": "registry:component",

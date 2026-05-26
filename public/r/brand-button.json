@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "brand-button",
+  "title": "Brand Button",
+  "description": "Rounded, emphasized button variant for CoreCN apps.",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/ui/brand-button.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Button } from \"@/registry/new-york/ui/button\"\n\nexport function BrandButton({\n  className,\n  ...props\n}: React.ComponentProps<typeof Button>) {\n  return (\n    <Button\n      className={cn(\n        \"rounded-full font-semibold tracking-tight shadow-md\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -2,8 +2,6 @@
 
 # dependencies
 /node_modules
-**/node_modules
-examples/**/.next
 /.pnp
 .pnp.*
 .yarn/*

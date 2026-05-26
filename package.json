@@ -1,9 +1,11 @@
 {
-  "name": "registry",
+  "name": "corecn",
+  "packageManager": "npm@10.9.2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "prebuild": "npm run registry:build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
