@@ -122,10 +122,11 @@ npm run docs:props
 
 ```
 registry.json              # Source catalog (67 items)
-registry/corecn/ui/      # All shadcn UI primitives (61 files)
-registry/corecn/blocks/  # Blocks + examples
+registry/corecn/ui/        # All shadcn UI primitives (62 files)
+registry/corecn/blocks/    # Blocks + examples
 public/r/                  # Built JSON (generated — commit for static deploy)
-scripts/                   # registry:generate script
+docs/props.md              # Generated props reference (npm run docs:props)
+scripts/                   # generate-registry-json, generate-props-docs
 components.json            # shadcn config for this repo
 examples/consumer-test/    # Sample app that installs from @corecn
 ```
