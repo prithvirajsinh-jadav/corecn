@@ -3,6 +3,10 @@
   "name": "combobox",
   "title": "Combobox",
   "description": "CoreCN Combobox primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button",
+    "input-group"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/combobox.tsx",

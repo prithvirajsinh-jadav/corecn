@@ -6,6 +6,9 @@
   "dependencies": [
     "cmdk"
   ],
+  "registryDependencies": [
+    "dialog"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/command.tsx",

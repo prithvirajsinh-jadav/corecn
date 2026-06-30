@@ -108,6 +108,16 @@ This project is a Next.js app; registry JSON in `public/r/` is deployed as stati
 
 Any static host works if you upload the contents of `public/r/` under `/r/`, or deploy the full Next.js app.
 
+## Component props reference
+
+See [docs/props.md](docs/props.md) for props, variants, and inherited attributes for every registry component.
+
+Regenerate after source changes:
+
+```bash
+npm run docs:props
+```
+
 ## Project structure
 
 ```

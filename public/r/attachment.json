@@ -3,6 +3,9 @@
   "name": "attachment",
   "title": "Attachment",
   "description": "CoreCN Attachment primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/attachment.tsx",

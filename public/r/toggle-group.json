@@ -3,6 +3,9 @@
   "name": "toggle-group",
   "title": "Toggle Group",
   "description": "CoreCN Toggle Group primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "toggle"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/toggle-group.tsx",

@@ -3,6 +3,9 @@
   "name": "dialog",
   "title": "Dialog",
   "description": "CoreCN Dialog primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/dialog.tsx",

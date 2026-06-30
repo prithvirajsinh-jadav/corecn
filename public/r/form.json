@@ -3,6 +3,9 @@
   "name": "form",
   "title": "Form",
   "description": "CoreCN Form primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "label"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/form.tsx",

@@ -141,7 +141,7 @@ function parseDeps(content: string, selfName: string) {
   const dependencies = new Set<string>()
 
   for (const match of content.matchAll(
-    /from ["']@\/registry\/new-york\/ui\/([a-z0-9-]+)["']/g
+    /from ["']@\/registry\/corecn\/ui\/([a-z0-9-]+)["']/g
   )) {
     const dep = match[1]
     if (dep !== selfName) registryDependencies.add(dep)

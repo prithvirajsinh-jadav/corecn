@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "registry:build": "shadcn build",
-    "registry:generate": "tsx scripts/generate-registry-json.mts"
+    "registry:generate": "tsx scripts/generate-registry-json.mts",
+    "docs:props": "tsx scripts/generate-props-docs.mts"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

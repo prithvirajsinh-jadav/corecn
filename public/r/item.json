@@ -3,6 +3,9 @@
   "name": "item",
   "title": "Item",
   "description": "CoreCN Item primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "separator"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/item.tsx",

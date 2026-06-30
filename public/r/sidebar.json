@@ -3,6 +3,15 @@
   "name": "sidebar",
   "title": "Sidebar",
   "description": "CoreCN Sidebar primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button",
+    "input",
+    "separator",
+    "sheet",
+    "skeleton",
+    "tooltip",
+    "use-mobile"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/sidebar.tsx",

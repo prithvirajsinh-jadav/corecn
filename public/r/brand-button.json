@@ -3,6 +3,9 @@
   "name": "brand-button",
   "title": "Brand Button",
   "description": "CoreCN Brand Button built on shadcn/ui.",
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/brand-button.tsx",

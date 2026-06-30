@@ -25,6 +25,9 @@
           "path": "registry/corecn/ui/alert-dialog.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -61,6 +64,9 @@
           "path": "registry/corecn/ui/attachment.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -97,6 +103,9 @@
           "path": "registry/corecn/ui/brand-button.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -133,6 +142,9 @@
           "path": "registry/corecn/ui/button-group.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "separator"
       ]
     },
     {
@@ -157,6 +169,9 @@
           "path": "registry/corecn/ui/calendar.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -181,6 +196,9 @@
           "path": "registry/corecn/ui/carousel.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button"
       ],
       "dependencies": [
         "embla-carousel-react"
@@ -235,6 +253,10 @@
           "path": "registry/corecn/ui/combobox.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button",
+        "input-group"
       ]
     },
     {
@@ -247,6 +269,9 @@
           "path": "registry/corecn/ui/command.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "dialog"
       ],
       "dependencies": [
         "cmdk"
@@ -274,6 +299,9 @@
           "path": "registry/corecn/ui/dialog.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -337,6 +365,10 @@
           "path": "registry/corecn/ui/field.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "label",
+        "separator"
       ]
     },
     {
@@ -349,6 +381,9 @@
           "path": "registry/corecn/ui/form.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "label"
       ]
     },
     {
@@ -373,6 +408,11 @@
           "path": "registry/corecn/ui/input-group.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "textarea"
       ]
     },
     {
@@ -412,6 +452,9 @@
           "path": "registry/corecn/ui/item.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "separator"
       ]
     },
     {
@@ -472,6 +515,9 @@
           "path": "registry/corecn/ui/message-scroller.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -520,6 +566,9 @@
           "path": "registry/corecn/ui/pagination.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "button"
       ]
     },
     {
@@ -632,6 +681,15 @@
           "path": "registry/corecn/ui/use-mobile.ts",
           "type": "registry:hook"
         }
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "separator",
+        "sheet",
+        "skeleton",
+        "tooltip",
+        "use-mobile"
       ]
     },
     {
@@ -744,6 +802,9 @@
           "path": "registry/corecn/ui/toggle-group.tsx",
           "type": "registry:ui"
         }
+      ],
+      "registryDependencies": [
+        "toggle"
       ]
     },
     {

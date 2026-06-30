@@ -3,6 +3,9 @@
   "name": "calendar",
   "title": "Calendar",
   "description": "CoreCN Calendar primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/calendar.tsx",

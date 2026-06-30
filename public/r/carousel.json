@@ -6,6 +6,9 @@
   "dependencies": [
     "embla-carousel-react"
   ],
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/carousel.tsx",

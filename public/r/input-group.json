@@ -3,6 +3,11 @@
   "name": "input-group",
   "title": "Input Group",
   "description": "CoreCN Input Group primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button",
+    "input",
+    "textarea"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/input-group.tsx",

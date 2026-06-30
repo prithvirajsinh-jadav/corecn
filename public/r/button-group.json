@@ -3,6 +3,9 @@
   "name": "button-group",
   "title": "Button Group",
   "description": "CoreCN Button Group primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "separator"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/button-group.tsx",

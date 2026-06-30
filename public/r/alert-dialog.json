@@ -3,6 +3,9 @@
   "name": "alert-dialog",
   "title": "Alert Dialog",
   "description": "CoreCN Alert Dialog primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/alert-dialog.tsx",

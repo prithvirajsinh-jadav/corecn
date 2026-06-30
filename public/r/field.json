@@ -3,6 +3,10 @@
   "name": "field",
   "title": "Field",
   "description": "CoreCN Field primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "label",
+    "separator"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/field.tsx",

@@ -3,6 +3,9 @@
   "name": "pagination",
   "title": "Pagination",
   "description": "CoreCN Pagination primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/pagination.tsx",

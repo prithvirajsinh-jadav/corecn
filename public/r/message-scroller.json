@@ -3,6 +3,9 @@
   "name": "message-scroller",
   "title": "Message Scroller",
   "description": "CoreCN Message Scroller primitive built on shadcn/ui.",
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "path": "registry/corecn/ui/message-scroller.tsx",
