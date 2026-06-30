@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from "@/registry/corecn/ui/card"
 import { cn } from "@/lib/utils"
 
 export type StatCardProps = {

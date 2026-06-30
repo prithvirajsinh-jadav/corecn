@@ -6,27 +6,38 @@ Custom UI components built on [shadcn/ui](https://ui.shadcn.com), distributed vi
 
 ```bash
 npm install
-npm run dev          # Preview registry components at http://localhost:3000
+npm run dev              # Preview registry components at http://localhost:3000
 npm run registry:build   # Regenerate public/r/*.json after changing registry.json
+npm run registry:generate  # Regenerate registry.json from registry/corecn/ui source
 ```
 
 After `registry:build`, static registry files are served from `public/r/`:
 
 | Endpoint | Purpose |
 |----------|---------|
-| `/r/registry.json` | Full catalog |
+| `/r/registry.json` | Full catalog (67 items) |
 | `/r/<item>.json` | Single installable item |
 
 ## Registry items
 
-| Item | Type | Description |
-|------|------|-------------|
-| `button`, `card`, `input`, `label`, `textarea` | `registry:ui` | shadcn primitives |
-| `brand-button` | `registry:ui` | Rounded brand-styled button |
-| `stat-card` | `registry:block` | Dashboard metric card |
-| `hello-world`, `example-form`, `complex-component`, `example-with-css` | examples | Template demos |
+**67 components** — full official shadcn/ui catalog plus CoreCN custom items.
 
-Source definitions live in [`registry.json`](registry.json). Component source is under [`registry/new-york/`](registry/new-york/).
+### UI primitives (61)
+
+`accordion`, `alert`, `alert-dialog`, `aspect-ratio`, `attachment`, `avatar`, `badge`, `brand-button`, `breadcrumb`, `bubble`, `button`, `button-group`, `calendar`, `card`, `carousel`, `chart`, `checkbox`, `collapsible`, `combobox`, `command`, `context-menu`, `dialog`, `direction`, `drawer`, `dropdown-menu`, `empty`, `field`, `form`, `hover-card`, `input`, `input-group`, `input-otp`, `item`, `kbd`, `label`, `marker`, `menubar`, `message`, `message-scroller`, `native-select`, `navigation-menu`, `pagination`, `popover`, `progress`, `radio-group`, `resizable`, `scroll-area`, `select`, `separator`, `sheet`, `skeleton`, `slider`, `sonner`, `spinner`, `switch`, `table`, `tabs`, `textarea`, `toggle`, `toggle-group`, `tooltip`
+
+### Blocks (2)
+
+| Item | Description |
+|------|-------------|
+| `sidebar` | Composable app sidebar |
+| `stat-card` | CoreCN dashboard metric card |
+
+### Examples (4)
+
+`hello-world`, `example-form`, `complex-component`, `example-with-css`
+
+Source definitions live in [`registry.json`](registry.json). Component source is under [`registry/corecn/`](registry/corecn/).
 
 ## Install in another project
 
@@ -34,8 +45,9 @@ Source definitions live in [`registry.json`](registry.json). Component source is
 
 ```bash
 npx shadcn@latest registry add @corecn=https://corecn.vercel.app/r/{name}.json
+npx shadcn@latest add @corecn/dialog
+npx shadcn@latest add @corecn/sidebar
 npx shadcn@latest add @corecn/stat-card
-npx shadcn@latest add @corecn/brand-button
 npx shadcn@latest list @corecn
 ```
 
@@ -52,7 +64,7 @@ Or add to `components.json`:
 ### Option B — Direct URL
 
 ```bash
-npx shadcn@latest add https://corecn.vercel.app/r/stat-card.json
+npx shadcn@latest add https://corecn.vercel.app/r/dialog.json
 ```
 
 ### Local testing
@@ -61,17 +73,25 @@ With the registry served on port 3000 (e.g. `npm run dev` or `npx serve public -
 
 ```bash
 npx shadcn@latest registry add @corecn=http://localhost:3000/r/{name}.json
-npx shadcn@latest add @corecn/stat-card
+npx shadcn@latest add @corecn/dialog
 ```
 
 A working consumer example is in [`examples/consumer-test/`](examples/consumer-test/).
 
-## Adding a new component
+## Adding or updating components
 
-1. Create the file under `registry/new-york/ui/` (primitive) or `registry/new-york/blocks/<name>/` (block).
-2. Add an item to [`registry.json`](registry.json) with `name`, `type`, `files`, and `registryDependencies` / `dependencies` as needed.
+1. Add or edit source under `registry/corecn/ui/` (primitive) or `registry/corecn/blocks/<name>/` (block).
+2. Run `npm run registry:generate` to refresh [`registry.json`](registry.json), or edit it manually.
 3. Run `npm run registry:build`.
 4. Test: `npx shadcn@latest view https://corecn.vercel.app/r/<name>.json` and `npx shadcn@latest add @corecn/<name>` from a consumer app.
+
+To bulk-sync with upstream shadcn:
+
+```bash
+npx shadcn@latest add --all -y --overwrite --path registry/corecn/ui
+npm run registry:generate
+npm run registry:build
+```
 
 ## Deploy to production
 
@@ -81,34 +101,21 @@ This project is a Next.js app; registry JSON in `public/r/` is deployed as stati
 
 1. Push this repo to GitHub.
 2. Import the project in [Vercel](https://vercel.com).
-3. Build command: `npm run build` (runs Next.js build; ensure `registry:build` runs first — add to `package.json` scripts if needed).
-
-Add a prebuild step so registry JSON is always fresh:
-
-```json
-"scripts": {
-  "prebuild": "npm run registry:build",
-  "build": "next build"
-}
-```
-
+3. Build command: `npm run build` (`prebuild` runs `registry:build` automatically).
 4. Production URL: `https://corecn.vercel.app`
 
 ### Other hosts
 
 Any static host works if you upload the contents of `public/r/` under `/r/`, or deploy the full Next.js app.
 
-## Optional: official registry index
-
-If this registry is public and open source, you can submit `@corecn` to the [shadcn registry index](https://ui.shadcn.com/docs/registry/registry-index) so users can discover it without pasting a URL template.
-
 ## Project structure
 
 ```
-registry.json              # Source catalog (edit this)
-registry/new-york/ui/      # Primitives + brand-button
-registry/new-york/blocks/  # Blocks (stat-card, examples, …)
+registry.json              # Source catalog (67 items)
+registry/corecn/ui/      # All shadcn UI primitives (61 files)
+registry/corecn/blocks/  # Blocks + examples
 public/r/                  # Built JSON (generated — commit for static deploy)
+scripts/                   # registry:generate script
 components.json            # shadcn config for this repo
 examples/consumer-test/    # Sample app that installs from @corecn
 ```

@@ -1,11 +1,11 @@
 import * as React from "react"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { BrandButton } from "@/registry/new-york/ui/brand-button"
-import { StatCard } from "@/registry/new-york/blocks/stat-card/stat-card"
-import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world"
-import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form"
-import PokemonPage from "@/registry/new-york/blocks/complex-component/page"
-import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card"
+import { BrandButton } from "@/registry/corecn/ui/brand-button"
+import { StatCard } from "@/registry/corecn/blocks/stat-card/stat-card"
+import { HelloWorld } from "@/registry/corecn/blocks/hello-world/hello-world"
+import { ExampleForm } from "@/registry/corecn/blocks/example-form/example-form"
+import PokemonPage from "@/registry/corecn/blocks/complex-component/page"
+import { ExampleCard } from "@/registry/corecn/blocks/example-with-css/example-card"
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 
