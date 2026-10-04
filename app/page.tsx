@@ -6,6 +6,7 @@ import { HelloWorld } from "@/registry/corecn/blocks/hello-world/hello-world"
 import { ExampleForm } from "@/registry/corecn/blocks/example-form/example-form"
 import PokemonPage from "@/registry/corecn/blocks/complex-component/page"
 import { ExampleCard } from "@/registry/corecn/blocks/example-with-css/example-card"
+import { ButtonPreview } from "@/app/button-preview"
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 
@@ -47,6 +48,16 @@ export default function Home() {
           <div className="flex justify-center pb-4">
             <BrandButton>Get started with CoreCN</BrandButton>
           </div>
+        </div>
+
+        <div
+          id="button-preview"
+          className="flex flex-col gap-4 border rounded-lg p-4 relative"
+        >
+          <h2 className="text-sm text-muted-foreground sm:pl-3">
+            Button loading and icon props
+          </h2>
+          <ButtonPreview />
         </div>
 
         <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">

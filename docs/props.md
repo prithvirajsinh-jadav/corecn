@@ -21,6 +21,11 @@ Install any component: `npx shadcn add @corecn/<name>`
 | `asChild` | `boolean` | false | Merge props onto child via Slot |
 | `variant` | `"default" \| "destructive" \| "outline" \| "secondary" \| "ghost" \| "link"` | "default" |  |
 | `size` | `"default" \| "xs" \| "sm" \| "lg" \| "icon"` | "default" |  |
+| `loading` | `boolean` | — | optional |
+| `loadingIcon` | `React.ReactNode` | — | optional |
+| `loadingText` | `string` | — | optional |
+| `icon` | `React.ReactNode` | — | optional |
+| `iconPlacement` | `"start" | "end"` | — | optional |
 
 **Inherited props:** All standard `<button>` HTML attributes
 
@@ -807,4 +812,4 @@ No custom props beyond standard HTML/React attributes.
 
 ---
 
-*Last generated: 2026-06-30T14:20:06.978Z*
+*Last generated: 2026-10-04T11:18:32.831Z*

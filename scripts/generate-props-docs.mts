@@ -111,14 +111,19 @@ function extractCvaVariants(content: string) {
 }
 
 function extractExplicitType(content: string) {
-  const match = content.match(/export type (\w+Props)\s*=\s*\{([^}]+)\}/s)
-  if (!match) return []
+  const blocks = [
+    ...content.matchAll(/export type (\w+Props)\s*=\s*\{([^}]+)\}/gs),
+    ...content.matchAll(/type (\w+OwnProps)\s*=\s*\{([^}]+)\}/gs),
+  ]
+  if (!blocks.length) return []
 
-  return [...match[2].matchAll(/(\w+)(\?)?:\s*([^;\n]+)/g)].map((m) => ({
-    name: m[1],
-    type: m[3].trim(),
-    required: !m[2],
-  }))
+  return blocks.flatMap((match) =>
+    [...match[2].matchAll(/(\w+)(\?)?:\s*([^;\n]+)/g)].map((m) => ({
+      name: m[1],
+      type: m[3].trim(),
+      required: !m[2],
+    }))
+  )
 }
 
 function extractComponentProps(content: string) {
@@ -133,6 +138,7 @@ function extractComponentProps(content: string) {
 
   const explicit = extractExplicitType(content)
   for (const p of explicit) {
+    if (props.some((existing) => existing.name === p.name)) continue
     props.push({ name: p.name, type: p.type, note: p.required ? "required" : "optional" })
   }
 
